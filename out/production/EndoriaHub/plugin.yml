@@ -1,0 +1,7 @@
+name: EndoriaLobby
+version: 1.0-SNAPSHOT
+main: fr.hugob147.endorialobby.EndoriaLobby
+authors: [hugob147, TinouHD]
+commands:
+  rank:
+    description: Permet de manipuler les rank.

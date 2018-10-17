@@ -19,13 +19,12 @@ public class PlayerChat
 
 		for(Player a : Bukkit.getOnlinePlayers())
 		{
-
-			if(lmsg.contains(a.getCustomName().toLowerCase()) || lmsg.contains(a.getDisplayName().toLowerCase()) || lmsg.contains(a.getName().toLowerCase()))
+			String name = a.getDisplayName().toLowerCase();
+			if(lmsg.contains(name))
 			{
 				a.playSound(a.getLocation(), Sound.LEVEL_UP, 100,12);
 				a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().getRank(p).getPrefix() + p.getDisplayName());
 			}
-			e.setMessage(msg.replace(a.getDisplayName(), "@"+a.getDisplayName()));
 		}
 
 		e.setFormat(new Rank().getRank(p).getPrefix() + "%1$s §7: §f%2$s");

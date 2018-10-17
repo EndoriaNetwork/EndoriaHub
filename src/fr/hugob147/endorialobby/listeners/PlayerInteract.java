@@ -15,7 +15,7 @@ public class PlayerInteract implements Listener
 
 		if(p.getGameMode() == GameMode.CREATIVE)
 		{
-			e.setCancelled(false);
+			return;
 		}else
 		{
 			if(e.getItem() != null)
