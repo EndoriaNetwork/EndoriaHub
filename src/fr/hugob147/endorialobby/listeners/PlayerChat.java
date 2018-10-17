@@ -18,7 +18,8 @@ public class PlayerChat
 
 		for(Player a : Bukkit.getOnlinePlayers())
 		{
-			if(msg.contains("@" + a.getCustomName()) || msg.contains("@" + a.getDisplayName()) || msg.contains("@" + a.getName()))
+			e.setMessage(msg.replace(a.getDisplayName(), "@"+a.getDisplayName()));
+			if(msg.contains(a.getCustomName()) || msg.contains(a.getDisplayName()) || msg.contains(a.getName()))
 			{
 				a.playSound(a.getLocation(), Sound.LEVEL_UP, 100,12);
 				a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().getRank(p).getPrefix() + p.getDisplayName());
