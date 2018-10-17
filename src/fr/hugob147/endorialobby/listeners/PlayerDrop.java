@@ -17,6 +17,7 @@ public class PlayerDrop implements Listener
 			if(it == new PlayerJoin().getStar().toItemStack() || it == new PlayerJoin().getGold().toItemStack())
 			{
 				e.setCancelled(true);
+
 			}
 		}
 	}
