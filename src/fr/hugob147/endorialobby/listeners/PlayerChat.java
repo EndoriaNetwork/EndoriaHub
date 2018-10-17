@@ -15,15 +15,17 @@ public class PlayerChat
 	{
 		Player p = e.getPlayer();
 		String msg = e.getMessage();
+		String lmsg = msg.toLowerCase();
 
 		for(Player a : Bukkit.getOnlinePlayers())
 		{
-			e.setMessage(msg.replace(a.getDisplayName(), "@"+a.getDisplayName()));
-			if(msg.contains(a.getCustomName()) || msg.contains(a.getDisplayName()) || msg.contains(a.getName()))
+
+			if(lmsg.contains(a.getCustomName().toLowerCase()) || lmsg.contains(a.getDisplayName().toLowerCase()) || lmsg.contains(a.getName().toLowerCase()))
 			{
 				a.playSound(a.getLocation(), Sound.LEVEL_UP, 100,12);
 				a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().getRank(p).getPrefix() + p.getDisplayName());
 			}
+			e.setMessage(msg.replace(a.getDisplayName(), "@"+a.getDisplayName()));
 		}
 
 		e.setFormat(new Rank().getRank(p).getPrefix() + "%1$s §7: §f%2$s");
