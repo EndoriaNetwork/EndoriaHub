@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactManager">
+    <artifact type="jar" name="EndoriaHub">
+      <output-path>$PROJECT_DIR$/../OUTPUT</output-path>
+      <root id="archive" name="EndoriaHub.jar">
+        <element id="module-output" name="EndoriaHub" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+      </root>
+    </artifact>
+  </component>
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EndoriaHub.iml" filepath="$PROJECT_DIR$/EndoriaHub.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="CVS" />
+  </component>
+  <component name="libraryTable">
+    <library name="spigot-1.8.8">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.8.8.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.8.8.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
+</project>
