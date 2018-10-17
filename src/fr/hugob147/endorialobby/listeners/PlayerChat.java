@@ -2,6 +2,7 @@ package fr.hugob147.endorialobby.listeners;
 
 import fr.hugob147.endorialobby.rank.Rank;
 import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,6 +20,7 @@ public class PlayerChat
 		{
 			if(msg.contains("@" + a.getCustomName()) || msg.contains("@" + a.getDisplayName()) || msg.contains("@" + a.getName()))
 			{
+				a.playSound(a.getLocation(), Sound.LEVEL_UP, 100,12);
 				a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().getRank(p).getPrefix() + p.getDisplayName());
 			}
 		}
