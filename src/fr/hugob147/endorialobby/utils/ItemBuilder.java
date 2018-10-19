@@ -104,7 +104,7 @@ public class ItemBuilder
   
   public ItemBuilder setWoolColor(DyeColor color)
   {
-    if (!this.is.getType().equals(Material.WOOL)) {
+    if (!this.is.getType().equals(Material.STAINED_GLASS_PANE)) {
       return this;
     }
     this.is.setDurability((short)color.getData());

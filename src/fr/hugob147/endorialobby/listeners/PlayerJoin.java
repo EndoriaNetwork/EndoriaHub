@@ -25,7 +25,7 @@ public class PlayerJoin implements Listener
 		Player player = e.getPlayer();
 
 		this.main.rank.createAccount(player);
-		this.main.coins.createAccount(player, 10L);
+		this.main.coins.createAccount(player, 0L);
 
 		e.setJoinMessage("§7[§a+§7] " + this.main.rank.getRank(player).getPrefix() + player.getName());
 		player.setGameMode(GameMode.ADVENTURE);
