@@ -8,12 +8,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
 
-public class InventorysManager
+public class InventoryManager
   implements Listener
 {
   private Player player;
   
-  public InventorysManager(Player player)
+  public InventoryManager(Player player)
   {
     this.player = player;
   }

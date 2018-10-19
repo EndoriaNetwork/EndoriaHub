@@ -32,8 +32,8 @@ public final class EndoriaLobby
 		new ScoreboardRunnable().runTaskTimer(this, 0L, 60L);
 	}
 
-	public void onDisable()
-	{
+	public void onDisable() {
+		mysql.disconnect();
 	}
 
 	public static EndoriaLobby getInstance()
