@@ -7,9 +7,13 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-public class Commands implements CommandExecutor
+import java.util.ArrayList;
+import java.util.List;
+
+public class RankCmd implements CommandExecutor, TabCompleter
 {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
@@ -121,5 +125,57 @@ public class Commands implements CommandExecutor
 			}
 		}
 		return false;
+	}
+
+	@Override public List<String> onTabComplete(CommandSender sender, Command cmd, String s, String[] args)
+	{
+		List<String> tab = new ArrayList<>();
+
+		if(cmd.getLabel().equalsIgnoreCase("rank"))
+		{
+			if(args.length == 1)
+			{
+				tab.add("set");
+				tab.add("get");
+				tab.add("list");
+			}
+			if(args.length == 2)
+			{
+				if(args[0].equalsIgnoreCase("set"))
+				{
+					for(Player p : Bukkit.getOnlinePlayers())
+					{
+						tab.add(p.getDisplayName());
+					}
+				}
+				if(args[0].equalsIgnoreCase("get"))
+				{
+					for(RankUnit rank : RankUnit.getRanks())
+					{
+						tab.add(rank.getName());
+					}
+					for(Player p : Bukkit.getOnlinePlayers())
+					{
+						tab.add(p.getDisplayName());
+					}
+				}
+				if(args[0].equalsIgnoreCase("list"))
+				{
+					return tab;
+				}
+			}
+			if(args.length == 3)
+			{
+				if(args[0].equalsIgnoreCase("set"))
+				{
+					for(RankUnit rank : RankUnit.getRanks())
+					{
+						tab.add(rank.getName());
+					}
+				}
+			}
+		}
+
+		return tab;
 	}
 }

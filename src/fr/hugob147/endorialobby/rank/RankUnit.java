@@ -62,7 +62,7 @@ public enum RankUnit
 		return null;
 	}
 
-	private static RankUnit[] getRanks()
+	public static RankUnit[] getRanks()
 	{
 		return values();
 	}
