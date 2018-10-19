@@ -2,4 +2,4 @@
 *.iws
 *.iws
 EndoriaHub.iws
-/out/*
+./out/*
