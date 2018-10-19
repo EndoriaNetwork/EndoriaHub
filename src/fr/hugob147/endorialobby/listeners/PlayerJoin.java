@@ -11,21 +11,22 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 
 public class PlayerJoin implements Listener
 {
 	private EndoriaLobby main = EndoriaLobby.getInstance();
 
-	private ItemBuilder star = new ItemBuilder(Material.NETHER_STAR).setName("§5Endoria Menu").setLore(new String[] { "" });
-	private ItemBuilder gold = new ItemBuilder(Material.GOLD_INGOT).setName("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!").setLore(new String[] { "" });
+	private ItemStack star = new ItemBuilder(Material.NETHER_STAR).setName("§5Endoria Menu").setLore(new String[] { " " }).toItemStack();
+	private ItemStack gold = new ItemBuilder(Material.GOLD_INGOT).setName("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!").setLore(new String[] { " " }).toItemStack();
 
 	@EventHandler public void onJoin(PlayerJoinEvent e)
 	{
 		Player player = e.getPlayer();
 
 		this.main.rank.createAccount(player);
-		this.main.coins.createAccount(player, 0L);
+		this.main.coins.createAccount(player, 0D);
 
 		e.setJoinMessage("§7[§a+§7] " + this.main.rank.getRank(player).getPrefix() + player.getName());
 		player.setGameMode(GameMode.ADVENTURE);
@@ -48,16 +49,16 @@ public class PlayerJoin implements Listener
 		ScoreboardManager sb = new ScoreboardManager(player);
 		sb.init();
 
-		player.getInventory().setItem(4, star.toItemStack());
-		player.getInventory().setItem(8, gold.toItemStack());
+		player.getInventory().setItem(4, star);
+		player.getInventory().setItem(8, gold);
 	}
 
-	public ItemBuilder getStar()
+	public ItemStack getStar()
 	{
 		return star;
 	}
 
-	public ItemBuilder getGold()
+	public ItemStack getGold()
 	{
 		return gold;
 	}

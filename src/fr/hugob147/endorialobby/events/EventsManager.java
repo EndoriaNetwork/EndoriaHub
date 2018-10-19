@@ -15,6 +15,7 @@ public class EventsManager
 		pm.registerEvents(new PlayerChat(), main);
 		pm.registerEvents(new PlayerDoAchivement(), main);
 		pm.registerEvents(new PlayerDrop(), main);
+		pm.registerEvents(new PlayerInteractMenu(), main);
 		pm.registerEvents(new EntityDamage(), main);
 		pm.registerEvents(new PlayerFoodLevelChange(), main);
 		pm.registerEvents(new WeatherEvent(), main);
