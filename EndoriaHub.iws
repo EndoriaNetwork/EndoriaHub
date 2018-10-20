@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02a68c27-ef85-4b71-b1b6-dc8f72ecc84e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/bungee/BungeeReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryClick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/InvBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/InvBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,35 +30,44 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="iws" value="1" />
-          <entry key="java" value="16" />
+          <entry key="java" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_WORKSPACE" value="1" />
-          <entry key="JAVA" value="16" />
+          <entry key="JAVA" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3464" />
+          <entry key="java" value="3478" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3464" />
+          <entry key="JAVA" value="3478" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/rank/RankUnit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -93,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="314">
+              <caret line="32" column="97" lean-forward="true" selection-start-line="32" selection-start-column="97" selection-end-line="32" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -184,7 +188,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/coins/Coins.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerDrop.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerInteractMenu.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerInteract.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java" />
@@ -194,6 +197,8 @@
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/bungee/BungeeReceiver.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/rank/RankUnit.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java" />
       </list>
     </option>
   </component>
@@ -294,7 +299,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540063081547" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540063499359" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OUTPUT" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -399,13 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/rank/RankUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -417,13 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -490,6 +481,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/rank/RankUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="32" column="97" lean-forward="true" selection-start-line="32" selection-start-column="97" selection-end-line="32" selection-end-column="97" />
         </state>
       </provider>
     </entry>

@@ -30,7 +30,7 @@ public class PlayerJoin implements Listener
 
 		e.setJoinMessage("§7[§a+§7] " + this.main.rank.getRank(player).getPrefix() + player.getName());
 		player.setGameMode(GameMode.ADVENTURE);
-		player.teleport(((World) Bukkit.getWorlds().get(0)).getSpawnLocation());
+		player.teleport(((World) Bukkit.getWorlds().get(0)).getSpawnLocation().add(0.5,0.1,0.5));
 		player.getInventory().clear();
 		player.getInventory().setHelmet(null);
 		player.getInventory().setChestplate(null);
