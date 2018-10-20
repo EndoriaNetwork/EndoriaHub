@@ -61,6 +61,11 @@ public class InvBuilder
 		}
 	}
 
+	public void addItem(ItemStack item)
+	{
+		inv.addItem(item);
+	}
+
 	public Inventory toInventory()
 	{
 		return inv;

@@ -16,7 +16,7 @@ public enum RankUnit
 	Helpeur(40, "Helpeur", "§bHelpeur ", ChatColor.AQUA),
 	Moderateur(30, "Mod", "§6Moderateur ", ChatColor.GOLD),
 	Resp_Moderateur(20, "Resp.Mod", "§6Resp.Mod ", ChatColor.GOLD),
-	Dev(10, "Developpeur", "§cDeveloppeur ", ChatColor.RED),
+	Dev(10, "Développeur", "§cDéveloppeur ", ChatColor.RED),
 	Admin(0, "Admin", "§4Admin ", ChatColor.DARK_RED);
 
 	private int power;

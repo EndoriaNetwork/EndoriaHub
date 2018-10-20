@@ -3,7 +3,6 @@ package fr.hugob147.endorialobby.events;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import fr.hugob147.endorialobby.EndoriaLobby;
-import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,7 +26,7 @@ public class InventoryClick implements Listener
 		ItemStack i = e.getCurrentItem();
 		Inventory inv = e.getClickedInventory();
 
-		Inventory endoriaMenu = new InventoryManager().endoriamenu();
+		Inventory endoriaMenu = new InventoryManager().endoriaMenu();
 
 		if(inv.getName().equals(endoriaMenu.getName()))
 		{
@@ -38,24 +37,20 @@ public class InventoryClick implements Listener
 				changeServer(p, "PrisonEndoria");
 			}else if(i.isSimilar(endoriaMenu.getItem(33)))
 			{
-				p.sendMessage("§aVous allez être connecté au serveur : §bBedWars");
-				changeServer(p, "BedwarsEndoria");
+				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(33), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(21)))
 			{
 				p.sendMessage("§aVous allez être connecté au serveur : §bFaction");
 				changeServer(p, "FactionEndoria");
 			}else if(i.isSimilar(endoriaMenu.getItem(13)))
 			{
-				p.sendMessage("§aVous allez être connecté au serveur : §bTaupe");
-				changeServer(p, "TaupeEndoria");
+				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(13), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(29)))
 			{
-				p.sendMessage("§aVous allez être connecté au serveur : §bUHCRun");
-				changeServer(p, "UchrunEndoria");
+				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(29), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(31)))
 			{
-				p.sendMessage("§aVous allez être connecté au serveur : §bSkyWars");
-				changeServer(p, "SkywarsEndoria");
+				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(31), p);
 			}
 		}
 

@@ -1,5 +1,6 @@
 package fr.hugob147.endorialobby;
 
+import fr.hugob147.endorialobby.bungee.BungeeReceiver;
 import fr.hugob147.endorialobby.coins.Coins;
 import fr.hugob147.endorialobby.events.CommandsManager;
 import fr.hugob147.endorialobby.events.EventsManager;
@@ -30,8 +31,10 @@ public final class EndoriaLobby
 
 		this.mysql.connect("localhost", "endoria", 3306, "Endoria", "hugo34");
 		getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+		getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new BungeeReceiver());
 
 		new ScoreboardRunnable().runTaskTimer(this, 0L, 60L);
+		new BungeeReceiver().init();
 	}
 
 	public void onDisable() {
