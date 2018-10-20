@@ -16,7 +16,7 @@ public class ItemsMenuManager
 		{
 			if (item.isSimilar(new PlayerJoin().getStar()))
 			{
-				new InventoryManager(player).endoriamenu();
+				player.openInventory(new InventoryManager(player).endoriamenu());
 			}
 		}
 	}

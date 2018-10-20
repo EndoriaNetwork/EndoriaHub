@@ -19,6 +19,6 @@ public class EventsManager
 		pm.registerEvents(new EntityDamage(), main);
 		pm.registerEvents(new PlayerFoodLevelChange(), main);
 		pm.registerEvents(new WeatherEvent(), main);
-		pm.registerEvents(new InventoryClick(), main);
+		pm.registerEvents(new InventoryClick(main), main);
 	}
 }

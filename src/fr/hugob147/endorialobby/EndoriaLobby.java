@@ -29,6 +29,8 @@ public final class EndoriaLobby
 		new CommandsManager().registers(this);
 
 		this.mysql.connect("localhost", "endoria", 3306, "Endoria", "hugo34");
+		getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+
 		new ScoreboardRunnable().runTaskTimer(this, 0L, 60L);
 	}
 

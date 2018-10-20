@@ -7,10 +7,10 @@ import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class InventoryManager
-  implements Listener
 {
 	private Player player;
 
@@ -18,8 +18,12 @@ public class InventoryManager
 	{
 		this.player = player;
 	}
+	public InventoryManager()
+	{
+		this.player = null;
+	}
 
-	public void endoriamenu()
+	public Inventory endoriamenu()
 	{
 		InvBuilder inv = new InvBuilder("§5Endoria Menu", 45);
 
@@ -40,7 +44,6 @@ public class InventoryManager
 
 		inv.fillEmptySlot(vitre);
 
-
-		this.player.openInventory(inv.toInventory());
+		return inv.toInventory();
 	}
 }
