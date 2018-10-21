@@ -36,15 +36,15 @@ public class ScoreboardManager implements org.bukkit.scoreboard.ScoreboardManage
 
 		right.setDisplayName("§5§lEndoria§f§lNetwork");
 		right.setDisplaySlot(DisplaySlot.SIDEBAR);
-		right.getScore("§1 ").setScore(10);
+		right.getScore("§1").setScore(10);
 		right.getScore("§6Serveur : §bLobby").setScore(9);
-		right.getScore("§1").setScore(8);
+		right.getScore("§1§2").setScore(8);
 		right.getScore("§6Pseudo : §e" + player.getName()).setScore(7);
-		right.getScore("§1 ").setScore(6);
+		right.getScore("§1§2§3").setScore(6);
 		right.getScore("§6Argent : §d" + main.coins.getCoins(player) + " ✪").setScore(5);
-		right.getScore("§1 ").setScore(4);
+		right.getScore("§1§2§3§4").setScore(4);
 		right.getScore("§6Rank: " + main.rank.getRank(player).getPrefix()).setScore(3);
-		right.getScore("§l ").setScore(2);
+		right.getScore("§l§2§3§4§5").setScore(2);
 		right.getScore("§emc.endorianetwork.eu").setScore(1);
 	}
 

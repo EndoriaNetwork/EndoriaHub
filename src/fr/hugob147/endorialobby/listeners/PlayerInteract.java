@@ -6,6 +6,7 @@ import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class PlayerInteract implements Listener
@@ -17,11 +18,17 @@ public class PlayerInteract implements Listener
 
 		if(p.getGameMode() == GameMode.CREATIVE)
 		{
-			new ItemsMenuManager(e.getItem(), e.getPlayer());
+			if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK)
+			{
+				new ItemsMenuManager(e.getItem(), e.getPlayer());
+			}
 			return;
 		}else
 		{
-			new ItemsMenuManager(e.getItem(), e.getPlayer());
+			if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK)
+			{
+				new ItemsMenuManager(e.getItem(), e.getPlayer());
+			}
 			e.setCancelled(true);
 		}
 
