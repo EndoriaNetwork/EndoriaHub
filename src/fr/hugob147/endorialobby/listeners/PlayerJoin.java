@@ -3,16 +3,22 @@ package fr.hugob147.endorialobby.listeners;
 import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.scoreboard.ScoreboardManager;
 import fr.hugob147.endorialobby.utils.ItemBuilder;
+import net.minecraft.server.v1_8_R3.IChatBaseComponent;
+import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerListHeaderFooter;
+import net.minecraft.server.v1_8_R3.PlayerConnection;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.World;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
+
+import java.lang.reflect.Field;
 
 public class PlayerJoin implements Listener
 {
@@ -51,6 +57,28 @@ public class PlayerJoin implements Listener
 
 		player.getInventory().setItem(4, star);
 		player.getInventory().setItem(8, gold);
+
+		ut(player);
+	}
+
+	public void ut(Player player){
+		PlayerConnection con = ((CraftPlayer)player).getHandle().playerConnection;
+
+		IChatBaseComponent tabHeadler = IChatBaseComponent.ChatSerializer.a("{\":text\":\" §5§fEndoriaNetwork\"}");
+		IChatBaseComponent tabFooter = IChatBaseComponent.ChatSerializer.a("{\":text\":\" \"}");
+
+		PacketPlayOutPlayerListHeaderFooter packet = new PacketPlayOutPlayerListHeaderFooter(tabHeadler);
+
+		try{
+			Field f = packet.getClass().getDeclaredField("b");
+			f.setAccessible(true);
+			f.set(packet, tabFooter);
+
+		}catch (Exception e){
+			e.printStackTrace();
+		}finally {
+			con.sendPacket(packet);
+		}
 	}
 
 	public ItemStack getStar()

@@ -107,7 +107,15 @@ public class ItemBuilder
     if (!this.is.getType().equals(Material.STAINED_GLASS_PANE)) {
       return this;
     }
-    this.is.setDurability((short)color.getData());
+    this.is.setDurability(color.getData());
+    return this;
+  }
+
+  public ItemBuilder setClayColor(DyeColor color){
+    if(!this.is.getType().equals(Material.CLAY)){
+      return this;
+    }
+    this.is.setDurability(color.getData());
     return this;
   }
   

@@ -57,9 +57,9 @@ public class InventoryManager
 	{
 		InvBuilder inv = new InvBuilder("§5§lServeurs §f§lUHCRun", 54);
 
-		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
 
 		for(String s : BungeeReceiver.getServers())
 		{
@@ -106,9 +106,9 @@ public class InventoryManager
 	{
 		InvBuilder inv = new InvBuilder("§5§lServeurs §f§lBedWars", 54);
 
-		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
 
 		for(String s : BungeeReceiver.getServers())
 		{
@@ -155,9 +155,9 @@ public class InventoryManager
 	{
 		InvBuilder inv = new InvBuilder("§5§lServeurs §f§lSkyWars", 54);
 
-		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
 
 		for(String s : BungeeReceiver.getServers())
 		{
@@ -204,9 +204,9 @@ public class InventoryManager
 	{
 		InvBuilder inv = new InvBuilder("§5§lServeurs §f§lTaupeGun", 54);
 
-		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
-		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setWoolColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack online = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.GREEN).setLore(new String[] {"§aClique gauche pour rejoindre","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack full = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.ORANGE).setLore(new String[] {"§6Ce serveur est complet","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
+		ItemStack close = new ItemBuilder(Material.HARD_CLAY).setClayColor(DyeColor.RED).setLore(new String[] {"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés"}).toItemStack();
 
 		for(String s : BungeeReceiver.getServers())
 		{
