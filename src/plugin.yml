@@ -5,3 +5,13 @@ authors: [hugob147, TinouHD]
 commands:
   rank:
     description: Permet de manipuler les rank.
+  ts:
+    description: Affiche l'ip du TeamSpeak d'EndoriaNetwork.
+    aliases: [teamspeak]
+  discord:
+    description: Affiche le lien d'invitation au discord d'EndoriaNetwork.
+  web:
+    description: Affiche le lien du site web d'EndoriaNetwork.
+    aliases: [site]
+  socials:
+    description: Affiche tous les liens des réseaux socieaux d'EndoriaNetwork.

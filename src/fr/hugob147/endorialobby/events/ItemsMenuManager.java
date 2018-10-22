@@ -1,11 +1,13 @@
 package fr.hugob147.endorialobby.events;
 
+import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.listeners.PlayerJoin;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 public class ItemsMenuManager
 {
+	EndoriaLobby main = EndoriaLobby.getInstance();
 	public ItemsMenuManager(ItemStack item, Player player)
 	{
 		if(item == null)
@@ -16,18 +18,18 @@ public class ItemsMenuManager
 			if (item.isSimilar(new PlayerJoin().getStar()))
 			{
 				player.openInventory(new InventoryManager(player).endoriaMenu());
-			}else if(item.isSimilar(new InventoryManager().endoriaMenu().getItem(29)))
+			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(29)))
 			{
-				player.openInventory(new InventoryManager(player).uhcrunServers());
-			}else if(item.isSimilar(new InventoryManager().endoriaMenu().getItem(13)))
+				player.openInventory(main.uhcInv.toInventory());
+			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(13)))
 			{
-				player.openInventory(new InventoryManager(player).taupeGunServers());
-			}else if(item.isSimilar(new InventoryManager().endoriaMenu().getItem(31)))
+				player.openInventory(main.tuapeInv.toInventory());
+			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(31)))
 			{
-				player.openInventory(new InventoryManager(player).skyWarsServers());
-			}else if(item.isSimilar(new InventoryManager().endoriaMenu().getItem(33)))
+				player.openInventory(main.skywarsInv.toInventory());
+			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(33)))
 			{
-				player.openInventory(new InventoryManager(player).bedWarsServers());
+				player.openInventory(main.bedwarsInv.toInventory());
 			}
 		}
 	}

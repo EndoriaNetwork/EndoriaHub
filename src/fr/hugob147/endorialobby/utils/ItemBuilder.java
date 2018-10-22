@@ -112,7 +112,7 @@ public class ItemBuilder
   }
 
   public ItemBuilder setClayColor(DyeColor color){
-    if(!this.is.getType().equals(Material.CLAY)){
+    if(!this.is.getType().equals(Material.STAINED_CLAY)){
       return this;
     }
     this.is.setDurability(color.getData());

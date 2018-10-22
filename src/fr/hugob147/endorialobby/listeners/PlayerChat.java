@@ -27,6 +27,8 @@ public class PlayerChat
 			}
 		}
 
-		e.setFormat(new Rank().getRank(p).getPrefix() + "%1$s §7: §f%2$s");
+		msg = msg.replace("&","§");
+		msg = msg.replace("%", " ");
+		e.setFormat(new Rank().getRank(p).getPrefix() + e.getPlayer().getName() + " §7: " + msg);
 	}
 }

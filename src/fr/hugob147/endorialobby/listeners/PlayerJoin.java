@@ -1,6 +1,9 @@
 package fr.hugob147.endorialobby.listeners;
 
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
 import fr.hugob147.endorialobby.EndoriaLobby;
+import fr.hugob147.endorialobby.rank.Rank;
 import fr.hugob147.endorialobby.scoreboard.ScoreboardManager;
 import fr.hugob147.endorialobby.utils.ItemBuilder;
 import net.minecraft.server.v1_8_R3.IChatBaseComponent;
@@ -34,7 +37,13 @@ public class PlayerJoin implements Listener
 		this.main.rank.createAccount(player);
 		this.main.coins.createAccount(player, 0D);
 
-		e.setJoinMessage("§7[§a+§7] " + this.main.rank.getRank(player).getPrefix() + player.getName());
+		if(new Rank().getRank(player).getPower() <= 80)
+		{
+			e.setJoinMessage(this.main.rank.getRank(player).getPrefix() + player.getName() + " §7a rejoint le §e§lHub§7 !");
+		}else
+		{
+			e.setJoinMessage("§7[§a+§7] " + this.main.rank.getRank(player).getPrefix() + player.getName());
+		}
 		player.setGameMode(GameMode.ADVENTURE);
 		player.teleport(((World) Bukkit.getWorlds().get(0)).getSpawnLocation().add(0.5,0.1,0.5));
 		player.getInventory().clear();
@@ -64,8 +73,8 @@ public class PlayerJoin implements Listener
 	public void ut(Player player){
 		PlayerConnection con = ((CraftPlayer)player).getHandle().playerConnection;
 
-		IChatBaseComponent tabHeadler = IChatBaseComponent.ChatSerializer.a("{\":text\":\" §5§fEndoriaNetwork\"}");
-		IChatBaseComponent tabFooter = IChatBaseComponent.ChatSerializer.a("{\":text\":\" \"}");
+		IChatBaseComponent tabHeadler = IChatBaseComponent.ChatSerializer.a("{\"text\":\" §5§lEndoria§f§lNetwork\"}");
+		IChatBaseComponent tabFooter = IChatBaseComponent.ChatSerializer.a("{\"text\":\" \"}");
 
 		PacketPlayOutPlayerListHeaderFooter packet = new PacketPlayOutPlayerListHeaderFooter(tabHeadler);
 

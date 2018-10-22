@@ -26,7 +26,7 @@ public class InventoryClick implements Listener
 		ItemStack i = e.getCurrentItem();
 		Inventory inv = e.getClickedInventory();
 
-		Inventory endoriaMenu = new InventoryManager().endoriaMenu();
+		Inventory endoriaMenu = new InventoryManager(p).endoriaMenu();
 
 		if(inv.getName().equals(endoriaMenu.getName()))
 		{
@@ -37,20 +37,20 @@ public class InventoryClick implements Listener
 				changeServer(p, "PrisonEndoria");
 			}else if(i.isSimilar(endoriaMenu.getItem(33)))
 			{
-				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(33), p);
+				new ItemsMenuManager(new InventoryManager(p).endoriaMenu().getItem(33), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(21)))
 			{
 				p.sendMessage("§aVous allez être connecté au serveur : §bFaction");
 				changeServer(p, "FactionEndoria");
 			}else if(i.isSimilar(endoriaMenu.getItem(13)))
 			{
-				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(13), p);
+				new ItemsMenuManager(new InventoryManager(p).endoriaMenu().getItem(13), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(29)))
 			{
-				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(29), p);
+				new ItemsMenuManager(new InventoryManager(p).endoriaMenu().getItem(29), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(31)))
 			{
-				new ItemsMenuManager(new InventoryManager().endoriaMenu().getItem(31), p);
+				new ItemsMenuManager(new InventoryManager(p).endoriaMenu().getItem(31), p);
 			}
 		}
 
