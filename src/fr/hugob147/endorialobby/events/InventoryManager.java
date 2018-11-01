@@ -56,6 +56,20 @@ public class InventoryManager implements PluginMessageListener
 		return inv.toInventory();
 	}
 
+	public Inventory menuboutique(){
+		InvBuilder inv = new InvBuilder("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!", 45);
+		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setWoolColor(DyeColor.PURPLE).toItemStack();
+		ItemStack Diamond = new ItemBuilder(Material.DIAMOND).setName("§bGrade").setLore("").toItemStack();
+		ItemStack Gold = new ItemBuilder(Material.GOLD_INGOT).setName("§eParticule").setLore("").toItemStack();
+
+		inv.setItem(Diamond, 21);
+		inv.setItem(Gold, 23);
+
+		inv.fillEmptySlot(vitre);
+
+		return inv.toInventory();
+	}
+
 	public InvBuilder serverInvInit(String server, InvBuilder inv)
 	{
 

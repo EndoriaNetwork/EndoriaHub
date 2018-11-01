@@ -8,11 +8,12 @@ import java.util.Map;
 public enum RankUnit
 {
 	Joueur(100, "Joueur", "§7Joueur ", ChatColor.GRAY),
+	MiniVip(95, "MiniVIP", "§aMini-VIP ", ChatColor.GREEN),
 	VIP(90, "VIP", "§eVIP ", ChatColor.YELLOW),
 	VIP_PLUS(80, "VIP+", "§9VIP+ ", ChatColor.BLUE),
 	AMI(70, "Ami", "§dFriends ", ChatColor.LIGHT_PURPLE),
-	Builder(60, "Builder", "§aBuilder ", ChatColor.GREEN),
-	Resp_Build(50, "Resp.Build", "§aResp.Builder ", ChatColor.GREEN),
+	Builder(60, "Builder", "§2Builder ", ChatColor.DARK_GREEN),
+	Resp_Build(50, "Resp.Build", "§2Resp.Builder ", ChatColor.DARK_GREEN),
 	Helpeur(40, "Helpeur", "§bHelpeur ", ChatColor.AQUA),
 	Moderateur(30, "Mod", "§6Moderateur ", ChatColor.GOLD),
 	Resp_Moderateur(20, "Resp.Mod", "§6Resp.Mod ", ChatColor.GOLD),

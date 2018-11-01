@@ -27,6 +27,14 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="spigot-1.8.8" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/EndoriaEco.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -15,6 +15,9 @@ public class ItemsMenuManager
 			return;
 		}else
 		{
+			if (item.isSimilar(new PlayerJoin().getGold())){
+				player.openInventory(new InventoryManager(player).menuboutique());
+			}
 			if (item.isSimilar(new PlayerJoin().getStar()))
 			{
 				player.openInventory(new InventoryManager(player).endoriaMenu());
