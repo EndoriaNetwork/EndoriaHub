@@ -16,7 +16,7 @@ public class PlayerQuit
 	@EventHandler public void onLeave(PlayerQuitEvent e)
 	{
 		Player player = e.getPlayer();
-		e.setQuitMessage("§7[§c-§7] " + player.getName());
+		e.setQuitMessage("");
 		this.main.scoreboard.remove(player.getUniqueId());
 	}
 }

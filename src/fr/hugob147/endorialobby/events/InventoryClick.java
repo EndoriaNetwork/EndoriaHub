@@ -54,6 +54,15 @@ public class InventoryClick implements Listener
 			}
 		}
 
+		Inventory menuBoutique = new InventoryManager(p).menuboutique();
+		if(inv.getName().equals(menuBoutique.getName())){
+			e.setCancelled(true);
+			if(i.isSimilar(menuBoutique.getItem(21))){
+				new ItemsMenuManager(new InventoryManager(p).menuboutique().getItem(21), p);
+
+			}
+		}
+
 
     }
 
