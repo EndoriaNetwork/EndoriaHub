@@ -42,7 +42,7 @@ public class PlayerJoin implements Listener
 			e.setJoinMessage(this.main.rank.getRank(player).getPrefix() + player.getName() + " §7a rejoint le §e§lHub§7 !");
 		}else
 		{
-			e.setJoinMessage("§7[§a+§7] " + this.main.rank.getRank(player).getPrefix() + player.getName());
+			e.setJoinMessage("");
 		}
 		player.setGameMode(GameMode.ADVENTURE);
 		player.teleport(((World) Bukkit.getWorlds().get(0)).getSpawnLocation().add(0.5,0.1,0.5));
@@ -73,8 +73,11 @@ public class PlayerJoin implements Listener
 	public void ut(Player player){
 		PlayerConnection con = ((CraftPlayer)player).getHandle().playerConnection;
 
-		IChatBaseComponent tabHeadler = IChatBaseComponent.ChatSerializer.a("{\"text\":\" §5§lEndoria§f§lNetwork\"}");
-		IChatBaseComponent tabFooter = IChatBaseComponent.ChatSerializer.a("{\"text\":\" \"}");
+		IChatBaseComponent tabHeadler = IChatBaseComponent.ChatSerializer.a("{\"text\":\" §5§lEndoria§f§lNetwork " +
+				"" +
+				"\"}");
+		IChatBaseComponent tabFooter = IChatBaseComponent.ChatSerializer.a("{\"text\":\" " +
+				"\"}");
 
 		PacketPlayOutPlayerListHeaderFooter packet = new PacketPlayOutPlayerListHeaderFooter(tabHeadler);
 

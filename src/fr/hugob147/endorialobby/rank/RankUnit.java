@@ -13,7 +13,6 @@ public enum RankUnit
 	VIP_PLUS(80, "VIP+", "§9VIP+ ", ChatColor.BLUE),
 	AMI(70, "Ami", "§dFriends ", ChatColor.LIGHT_PURPLE),
 	Builder(60, "Builder", "§2Builder ", ChatColor.DARK_GREEN),
-	Resp_Build(50, "Resp.Build", "§2Resp.Builder ", ChatColor.DARK_GREEN),
 	Helpeur(40, "Helpeur", "§bHelpeur ", ChatColor.AQUA),
 	Moderateur(30, "Mod", "§6Moderateur ", ChatColor.GOLD),
 	Resp_Moderateur(20, "Resp.Mod", "§6Resp.Mod ", ChatColor.GOLD),

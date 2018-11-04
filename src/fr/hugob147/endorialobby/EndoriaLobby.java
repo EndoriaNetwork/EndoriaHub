@@ -32,6 +32,8 @@ public final class EndoriaLobby
 	public InvBuilder bedwarsInv = new InvBuilder("§5§lServeurs §f§lBedWars", 54);
 	public InvBuilder skywarsInv = new InvBuilder("§5§lServeurs §f§lSkyWars", 54);
 	public InvBuilder tuapeInv = new InvBuilder("§5§lServeurs §f§lTaupeGun", 54);
+	public InvBuilder grade = new InvBuilder("§bGrade", 27);
+	public InvBuilder particule = new InvBuilder("§cParticule", 27);
 
 	public void onEnable()
 	{

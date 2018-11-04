@@ -17,6 +17,8 @@ public class ItemsMenuManager
 		{
 			if (item.isSimilar(new PlayerJoin().getGold())){
 				player.openInventory(new InventoryManager(player).menuboutique());
+			}else if(item.isSimilar(new InventoryManager(player).menuboutique().getItem(21))){
+
 			}
 			if (item.isSimilar(new PlayerJoin().getStar()))
 			{
