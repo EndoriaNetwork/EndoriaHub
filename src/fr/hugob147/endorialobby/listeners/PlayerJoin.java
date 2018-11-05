@@ -74,6 +74,7 @@ public class PlayerJoin implements Listener
 		PlayerConnection con = ((CraftPlayer)player).getHandle().playerConnection;
 
 		IChatBaseComponent tabHeadler = IChatBaseComponent.ChatSerializer.a("{\"text\":\"§7/_'o'_/ §fVous jouez sur §5§lEndoria§f§lNetwork §7 /_'o'_/ \n\"}");
+
         IChatBaseComponent tabFooter = IChatBaseComponent.ChatSerializer.a("{\"text\":\" \n\"}");
 
 		PacketPlayOutPlayerListHeaderFooter packet = new PacketPlayOutPlayerListHeaderFooter(tabHeadler);
