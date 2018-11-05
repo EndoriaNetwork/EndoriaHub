@@ -2,6 +2,7 @@ package fr.hugob147.endorialobby.events;
 
 import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.listeners.PlayerJoin;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -15,12 +16,19 @@ public class ItemsMenuManager
 			return;
 		}else
 		{
-			if (item.isSimilar(new PlayerJoin().getGold())){
+			if (item.isSimilar(new PlayerJoin().getGold()))
+			{
 				player.openInventory(new InventoryManager(player).menuboutique());
-			}else if(item.isSimilar(new InventoryManager(player).menuboutique().getItem(21))){
-
-			}
-			if (item.isSimilar(new PlayerJoin().getStar()))
+			}else if(item.isSimilar(new InventoryManager(player).menuboutique().getItem(21)))
+			{
+				player.openInventory(main.grade.toInventory());
+			}else if(item.isSimilar(new InventoryManager(player).menuboutique().getItem(23)))
+			{
+				//player.openInventory(main.particule.toInventory());
+				player.closeInventory();
+				player.playSound(player.getLocation(), Sound.LEVEL_UP, 100,0.20F);
+				player.sendMessage("§cCette fonctionnalité n'est pas disponible !");
+			}else if (item.isSimilar(new PlayerJoin().getStar()))
 			{
 				player.openInventory(new InventoryManager(player).endoriaMenu());
 			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(29)))
