@@ -1,7 +1,5 @@
 package fr.hugob147.endorialobby.listeners;
 
-import com.google.common.io.ByteArrayDataOutput;
-import com.google.common.io.ByteStreams;
 import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.rank.Rank;
 import fr.hugob147.endorialobby.scoreboard.ScoreboardManager;
@@ -27,8 +25,8 @@ public class PlayerJoin implements Listener
 {
 	private EndoriaLobby main = EndoriaLobby.getInstance();
 
-	private ItemStack star = new ItemBuilder(Material.NETHER_STAR).setName("§5Endoria Menu").setLore(new String[] { " " }).toItemStack();
-	private ItemStack gold = new ItemBuilder(Material.GOLD_INGOT).setName("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!").setLore(new String[] { " " }).toItemStack();
+	private ItemStack star = new ItemBuilder(Material.NETHER_STAR).setName("§5Endoria Menu").setLore(" ").toItemStack();
+	private ItemStack gold = new ItemBuilder(Material.GOLD_INGOT).setName("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!").setLore(" ").toItemStack();
 
 	@EventHandler public void onJoin(PlayerJoinEvent e)
 	{
