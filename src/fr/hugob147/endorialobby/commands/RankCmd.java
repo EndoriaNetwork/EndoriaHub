@@ -22,7 +22,7 @@ public class RankCmd implements CommandExecutor, TabCompleter
 			if (sender instanceof Player)
 			{
 				Player player = (Player) sender;
-				if (new Rank().getRank(player).getPower() > RankUnit.Dev.getPower())
+				if (new Rank().init().getRank(player).getPower() > RankUnit.Dev.getPower())
 				{
 					player.sendMessage("§cVous n'avez pas la permission d'éxecuter cette commande !");
 					return false;
@@ -46,13 +46,13 @@ public class RankCmd implements CommandExecutor, TabCompleter
 							{
 								RankUnit rank = RankUnit.getFromName(args[2]);
 
-								if (new Rank().getRank(target) == rank)
+								if (new Rank().init().getRank(target) == rank)
 								{
 									sender.sendMessage(ChatColor.YELLOW + "Ce joueur possède déjà ce grade !");
 									return false;
 								}else
 								{
-									new Rank().setRank(target, rank);
+									new Rank().init().setRank(target, rank);
 									sender.sendMessage("§aLe joueur " + target.getName() + " est désormais " + rank.getName());
 									return true;
 								}
@@ -87,7 +87,7 @@ public class RankCmd implements CommandExecutor, TabCompleter
 							sender.sendMessage("§bListe des joueurs dans §e" + rank.getName() + "§b.");
 							for(Player p : Bukkit.getOnlinePlayers())
 							{
-								if(new Rank().getRank(p) == rank)
+								if(new Rank().init().getRank(p) == rank)
 								{
 									sender.sendMessage("- " + p.getPlayerListName());
 									nb++;
@@ -98,7 +98,7 @@ public class RankCmd implements CommandExecutor, TabCompleter
 						}else if(Bukkit.getPlayer(args[1]) != null)
 						{
 							Player target = Bukkit.getPlayer(args[1]);
-							sender.sendMessage(target.getPlayerListName() + " §eest " + new Rank().getRank(target).getName());
+							sender.sendMessage(target.getPlayerListName() + " §eest " + new Rank().init().getRank(target).getName());
 						}else
 						{
 							sender.sendMessage("§cCe joueur ou ce garde n'existe pas.");

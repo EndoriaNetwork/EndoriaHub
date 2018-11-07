@@ -37,7 +37,7 @@ public class PlayerJoin implements Listener
 
 		if(new Rank().getRank(player).getPower() <= 80)
 		{
-			e.setJoinMessage(this.main.rank.getRank(player).getPrefix() + player.getName() + " §7a rejoint le §e§lHub§7 !");
+			e.setJoinMessage(this.main.rank.init().getRank(player).getPrefix() + player.getName() + " §7a rejoint le §e§lHub§7 !");
 		}else
 		{
 			e.setJoinMessage("");

@@ -1,5 +1,6 @@
 package fr.hugob147.endorialobby.rank;
 
+import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.mysql.MySQL;
 import org.bukkit.entity.Player;
 
@@ -9,6 +10,15 @@ import java.sql.SQLException;
 
 public class Rank
 {
+	public Rank init()
+	{
+		if(!EndoriaLobby.getInstance().mysql.isConnected())
+		{
+			EndoriaLobby.getInstance().mysql.connect("localhost", "endoria", 3306, "Endoria", "hugo34");
+		}
+		return this;
+	}
+
 	public void createAccount(Player p)
 	{
 		try

@@ -23,12 +23,12 @@ public class PlayerChat
 			if(lmsg.contains(name))
 			{
 				a.playSound(a.getLocation(), Sound.LEVEL_UP, 100,12);
-				a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().getRank(p).getPrefix() + p.getDisplayName());
+				a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().init().getRank(p).getPrefix() + p.getDisplayName());
 			}
 		}
 
 		msg = msg.replace("&","§");
 		msg = msg.replace("%", " ");
-		e.setFormat(new Rank().getRank(p).getPrefix() + e.getPlayer().getName() + " §7: " + msg);
+		e.setFormat(new Rank().init().getRank(p).getPrefix() + e.getPlayer().getName() + " §7: " + msg);
 	}
 }

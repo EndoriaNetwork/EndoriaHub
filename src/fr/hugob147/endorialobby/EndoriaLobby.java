@@ -44,7 +44,6 @@ public final class EndoriaLobby
 		new EventsManager().registers(this);
 		new CommandsManager().registers(this);
 
-		this.mysql.connect("localhost", "endoria", 3306, "Endoria", "hugo34");
 		getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 		getServer().getMessenger().registerOutgoingPluginChannel(this, "Endoria");
 		getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new PluginMessageReceiver());
