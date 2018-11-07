@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactManager">
     <artifact type="jar" build-on-make="true" name="EndoriaHub">
-      <output-path>$PROJECT_DIR$/../OUTPUT</output-path>
+      <output-path>$PROJECT_DIR$/../..</output-path>
       <root id="archive" name="EndoriaHub.jar">
         <element id="module-output" name="EndoriaHub" />
         <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
@@ -156,13 +156,13 @@
     <mapping directory="" vcs="Git" />
   </component>
   <component name="libraryTable">
-    <library name="spigot-1.8.8">
+    <library name="spigot">
       <CLASSES>
-        <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.8.8.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/spigot.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/Desktop/buildtools/spigot-1.8.8.jar!/" />
+        <root url="jar://$USER_HOME$/Desktop/spigot.jar!/" />
       </SOURCES>
     </library>
   </component>

@@ -36,6 +36,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="spigot-1.8.8" level="project" />
+    <orderEntry type="library" name="spigot" level="project" />
   </component>
 </module>
