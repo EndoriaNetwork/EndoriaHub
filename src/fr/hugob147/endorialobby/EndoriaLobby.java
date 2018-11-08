@@ -1,19 +1,18 @@
 package fr.hugob147.endorialobby;
 
 import com.google.common.collect.Iterables;
-import fr.hugob147.endorialobby.pluginmessaging.PluginMessageReceiver;
 import fr.hugob147.endorialobby.coins.Coins;
 import fr.hugob147.endorialobby.events.CommandsManager;
 import fr.hugob147.endorialobby.events.EventsManager;
 import fr.hugob147.endorialobby.events.InventoryManager;
 import fr.hugob147.endorialobby.mysql.MySQL;
+import fr.hugob147.endorialobby.pluginmessaging.PluginMessageReceiver;
 import fr.hugob147.endorialobby.rank.Rank;
 import fr.hugob147.endorialobby.scoreboard.ScoreboardManager;
 import fr.hugob147.endorialobby.scoreboard.ScoreboardRunnable;
 import fr.hugob147.endorialobby.utils.InvBuilder;
 import fr.hugob147.endorialobby.utils.ServersListsUpdateRunnable;
 import org.bukkit.Bukkit;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -36,6 +35,7 @@ public final class EndoriaLobby
 	public InvBuilder tuapeInv = new InvBuilder("§5§lServeurs §f§lTaupeGun", 54);
 	public InvBuilder grade = new InvBuilder("§bGrade", 27);
 	public InvBuilder particule = new InvBuilder("§cParticule", 27);
+	public List<Player> canDoubleJump = new ArrayList<>();
 
 	public void onEnable()
 	{

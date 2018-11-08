@@ -22,5 +22,6 @@ public class EventsManager
 		pm.registerEvents(new InventoryClick(main), main);
 		pm.registerEvents(new PlayerDeath(), main);
 		pm.registerEvents(new DoubleJumpEvent(), main);
+		pm.registerEvents(new PlayerPickup(), main);
 	}
 }

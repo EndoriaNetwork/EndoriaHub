@@ -1,6 +1,7 @@
 package fr.hugob147.endorialobby.listeners;
 
 import fr.hugob147.endorialobby.rank.Rank;
+import fr.hugob147.endorialobby.utils.Cooldowns;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -14,21 +15,27 @@ public class PlayerChat
 	@EventHandler public void onChat(AsyncPlayerChatEvent e)
 	{
 		Player p = e.getPlayer();
-		String msg = e.getMessage();
-		String lmsg = msg.toLowerCase();
-
-		for(Player a : Bukkit.getOnlinePlayers())
+		if (Cooldowns.playerChat(p))
 		{
-			String name = a.getDisplayName().toLowerCase();
-			if(lmsg.contains(name))
-			{
-				a.playSound(a.getLocation(), Sound.LEVEL_UP, 100,12);
-				a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().init().getRank(p).getPrefix() + p.getDisplayName());
-			}
-		}
+			String msg = e.getMessage();
+			String lmsg = msg.toLowerCase();
 
-		msg = msg.replace("&","§");
-		msg = msg.replace("%", " ");
-		e.setFormat(new Rank().init().getRank(p).getPrefix() + e.getPlayer().getName() + " §7: " + msg);
+			for (Player a : Bukkit.getOnlinePlayers())
+			{
+				String name = a.getDisplayName().toLowerCase();
+				if (lmsg.contains(name))
+				{
+					a.playSound(a.getLocation(), Sound.LEVEL_UP, 100, 12);
+					a.sendMessage("§eTu as été §cmentionné §epar : §a" + new Rank().init().getRank(p).getPrefix() + p.getDisplayName());
+				}
+			}
+
+			msg = msg.replace("&", "§");
+			msg = msg.replace("%", " ");
+			e.setFormat(new Rank().init().getRank(p).getPrefix() + e.getPlayer().getName() + " §7: " + msg);
+		}else
+		{
+			e.setCancelled(true);
+		}
 	}
 }

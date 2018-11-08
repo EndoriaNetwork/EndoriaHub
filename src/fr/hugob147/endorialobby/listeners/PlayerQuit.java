@@ -1,7 +1,5 @@
 package fr.hugob147.endorialobby.listeners;
 
-import com.google.common.io.ByteArrayDataOutput;
-import com.google.common.io.ByteStreams;
 import fr.hugob147.endorialobby.EndoriaLobby;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

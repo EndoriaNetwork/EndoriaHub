@@ -2,7 +2,6 @@ package fr.hugob147.endorialobby.pluginmessaging;
 
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
-import fr.hugob147.endorialobby.EndoriaLobby;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.messaging.PluginMessageListener;
 

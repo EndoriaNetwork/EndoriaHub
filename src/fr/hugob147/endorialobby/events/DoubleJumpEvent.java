@@ -1,59 +1,56 @@
 package fr.hugob147.endorialobby.events;
 
-import fr.hugob147.endorialobby.rank.Rank;
+import fr.hugob147.endorialobby.EndoriaLobby;
+import fr.hugob147.endorialobby.utils.Cooldowns;
 import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.block.BlockFace;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleFlightEvent;
+import org.bukkit.util.Vector;
 
+public class DoubleJumpEvent implements Listener
+{
+	@EventHandler public void doubleJump(PlayerToggleFlightEvent e)
+	{
+		Player p = e.getPlayer();
+		if (p.getGameMode() == GameMode.CREATIVE || p.getGameMode() == GameMode.SPECTATOR)
+		{
+			return;
+		}
+		if (EndoriaLobby.getInstance().canDoubleJump.contains(p))
+		{
+			e.setCancelled(true);
+			p.setFlying(false);
+			p.setAllowFlight(false);
+			Location loc = p.getLocation();
+			Vector v = loc.getDirection().multiply(1.5f).setY(1.5);
+			p.setVelocity(v);
+			loc.getWorld().playSound(loc, Sound.EXPLODE, 1, 0.2f);
+			loc.setDirection(new Vector(1,2,1));
+			loc.getWorld().playEffect(loc, Effect.SMOKE, 60);
+		}
+	}
 
-import java.util.ArrayList;
+	@EventHandler
+	public void onMove(PlayerMoveEvent e)
+	{
+		Player p = e.getPlayer();
+		if(p.getGameMode() == GameMode.CREATIVE || p.getGameMode() == GameMode.SPECTATOR)
+		{
+			return;
+		}
 
-public class DoubleJumpEvent implements Listener {
-
-    public ArrayList<Player> jump = new ArrayList<Player>();
-
-    @EventHandler
-    public void doubleJump(PlayerToggleFlightEvent e){
-        Player p = e.getPlayer();
-        Location loc = new Location(p.getWorld(), p.getLocation().getBlockX(), p.getLocation().getBlockY(), p.getLocation().getBlockZ());
-
-        if(new Rank().getRank(p).getPower() <= 80){
-            if(!jump.contains(p)){
-                if(p.getGameMode() != GameMode.CREATIVE){
-                    if(p.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == Material.AIR){
-                        e.setCancelled(true);
-                        p.setFlying(false);
-                        p.setVelocity(p.getLocation().getDirection().multiply(1.5).setY(1));
-                        jump.add(p);
-                        p.getLocation().getWorld().playEffect(loc, Effect.BLAZE_SHOOT, 2);
-
-                    }
-
-                }
-            }
-        }
-
-    }
-
-    @EventHandler
-    public void onMove(PlayerMoveEvent e){
-        Player p = e.getPlayer();
-
-        Material dessous = p.getLocation().subtract(0, 1 , 0).getBlock().getType();
-        if(p.getGameMode() != GameMode.CREATIVE && (dessous != Material.AIR) && (!p.isFlying())){
-            jump.remove(p);
-            p.setAllowFlight(false);
-        }else{
-            p.setAllowFlight(true);
-        }
-    }
-
-
+		if(p.isOnGround())
+		{
+			if(!p.getAllowFlight() && EndoriaLobby.getInstance().canDoubleJump.contains(p))
+			{
+				p.setAllowFlight(true);
+			}
+		}
+	}
 }

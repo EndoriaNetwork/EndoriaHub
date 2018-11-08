@@ -27,21 +27,39 @@ public class PlayerJoin implements Listener
 
 	private ItemStack star = new ItemBuilder(Material.NETHER_STAR).setName("§5Endoria Menu").setLore(" ").toItemStack();
 	private ItemStack gold = new ItemBuilder(Material.GOLD_INGOT).setName("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!").setLore(" ").toItemStack();
+	private ItemStack jumpOn = new ItemBuilder(Material.INK_SACK).setDurability((short) 10).setName("§eSuper saut : §a§lOn").setLore(" ").toItemStack();
+	private ItemStack jumpOff = new ItemBuilder(Material.INK_SACK).setDurability((short) 8).setName("§eSuper saut : §c§lOff").setLore(" ").toItemStack();
+	private ItemStack playersNoVisible = new ItemBuilder(Material.SKULL_ITEM).setSkullUrl("http://textures.minecraft.net/texture/ba24a2b6b4b5a92d7a82a373fe5f6bb66872ead66c126f82e8864173cd783a").setLore(" ").setName("§dVisibilité des joueurs : §c§lNon").toItemStack();
+	private ItemStack playersYesVisible = new ItemBuilder(Material.SKULL_ITEM).setSkullUrl("http://textures.minecraft.net/texture/9054d4164ea8bba02836bd513c420d04dd91b9fdbb3da17e69f9bf89ffd695").setLore(" ").setName("§dVisibilité des joueurs : §a§lOui").toItemStack();
+	private ItemStack playersTrasnpVisible = new ItemBuilder(Material.SKULL_ITEM).setSkullUrl("http://textures.minecraft.net/texture/e6ad6751595dec669fffc895a1916aff719216f541af112a969351c57be4a8").setLore(" ").setName("§dVisibilité des joueurs : §5§lTransparent").toItemStack();
 
 	@EventHandler public void onJoin(PlayerJoinEvent e)
 	{
 		Player player = e.getPlayer();
 
+		for(Player a : Bukkit.getOnlinePlayers())
+		{
+			if(a.getInventory().getItem(2) != null)
+			{
+				if (a.getInventory().getItem(2).isSimilar(playersNoVisible))
+				{
+					a.hidePlayer(player);
+				} else if (a.getInventory().getItem(2).isSimilar(playersYesVisible))
+				{
+					a.showPlayer(player);
+				} else if (a.getInventory().getItem(2).isSimilar(playersTrasnpVisible))
+				{
+					//TODO: trasp player
+					a.showPlayer(player);
+				}
+			}
+		}
+
+		EndoriaLobby.getInstance().mysql.connect("localhost", "endoria", 3306, "Endoria", "hugo34");
+
 		this.main.rank.createAccount(player);
 		this.main.coins.createAccount(player, 0D);
 
-		if(new Rank().getRank(player).getPower() <= 80)
-		{
-			e.setJoinMessage(this.main.rank.init().getRank(player).getPrefix() + player.getName() + " §7a rejoint le §e§lHub§7 !");
-		}else
-		{
-			e.setJoinMessage("");
-		}
 		player.setGameMode(GameMode.ADVENTURE);
 		player.teleport(((World) Bukkit.getWorlds().get(0)).getSpawnLocation().add(0.5,0.1,0.5));
 		player.getInventory().clear();
@@ -57,6 +75,16 @@ public class PlayerJoin implements Listener
 		{
 			player.removePotionEffect(pe.getType());
 		}
+
+		if(new Rank().getRank(player).getPower() <= 80)
+		{
+			EndoriaLobby.getInstance().canDoubleJump.add(player);
+			player.getInventory().setItem(0, jumpOn);
+			e.setJoinMessage(this.main.rank.init().getRank(player).getPrefix() + player.getName() + " §7a rejoint le §e§lHub§7 !");
+		}else
+		{
+			e.setJoinMessage("");
+		}
 		//DEBUG player.sendMessage("§7[§aBanque§7] §6Votre solde est de : §e" + this.main.coins.getCoins(player) + "✪");
 
 		ScoreboardManager sb = new ScoreboardManager(player);
@@ -64,6 +92,7 @@ public class PlayerJoin implements Listener
 
 		player.getInventory().setItem(4, star);
 		player.getInventory().setItem(8, gold);
+		player.getInventory().setItem(2, playersYesVisible);
 
 		ut(player);
 	}
@@ -99,5 +128,30 @@ public class PlayerJoin implements Listener
 	public ItemStack getGold()
 	{
 		return gold;
+	}
+
+	public ItemStack getJumpOn()
+	{
+		return jumpOn;
+	}
+
+	public ItemStack getJumpOff()
+	{
+		return jumpOff;
+	}
+
+	public ItemStack getPlayersNoVisible()
+	{
+		return playersNoVisible;
+	}
+
+	public ItemStack getPlayersYesVisible()
+	{
+		return playersYesVisible;
+	}
+
+	public ItemStack getPlayersTrasnpVisible()
+	{
+		return playersTrasnpVisible;
 	}
 }
