@@ -40,10 +40,6 @@ public class ItemBuilder
 		this.is = new ItemStack(m, amount, meta);
 	}
 
-	public ItemBuilder(Material stainedGlassPane, int amount, int meta)
-	{
-	}
-
 	public ItemBuilder clone()
 	{
 		return new ItemBuilder(this.is);

@@ -4,11 +4,13 @@ import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import fr.hugob147.endorialobby.EndoriaLobby;
+import fr.hugob147.endorialobby.shop.ShopItems;
 import fr.hugob147.endorialobby.utils.InvBuilder;
 import fr.hugob147.endorialobby.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -64,6 +66,22 @@ public class InventoryManager implements PluginMessageListener
 
 		inv.setItem(Diamond, 21);
 		inv.setItem(Gold, 23);
+
+		inv.fillEmptySlot(vitre);
+
+		return inv.toInventory();
+	}
+
+	public Inventory menuboutiquegrade(){
+		InvBuilder inv = new InvBuilder("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!", 27);
+		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setWoolColor(DyeColor.PURPLE).toItemStack();
+
+		inv.fillSlotToSlot(0,10,vitre);
+
+		for(ShopItems shop : ShopItems.values())
+		{
+			inv.addItem(shop.getIcon());
+		}
 
 		inv.fillEmptySlot(vitre);
 

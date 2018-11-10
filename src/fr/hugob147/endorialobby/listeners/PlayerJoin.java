@@ -76,7 +76,7 @@ public class PlayerJoin implements Listener
 			player.removePotionEffect(pe.getType());
 		}
 
-		if(new Rank().getRank(player).getPower() <= 80)
+		if(new Rank().init().getRank(player).getPower() <= 80)
 		{
 			EndoriaLobby.getInstance().canDoubleJump.add(player);
 			player.getInventory().setItem(0, jumpOn);

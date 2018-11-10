@@ -2,18 +2,22 @@ package fr.hugob147.endorialobby.utils;
 
 import org.bukkit.entity.Player;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class Cooldowns
 {
+	public static List<UUID> byPass = new ArrayList<>();
+
 	private static Map<UUID, Long> toggleDoubleJump = new HashMap<>();
 	private static Map<UUID, Long> playersVisibility = new HashMap<>();
 	private static Map<UUID, Long> playerChat = new HashMap<>();
 
 	public static boolean toggleDoubleJump(Player p)
 	{
+		if(byPass.contains(p.getUniqueId()))
+		{
+			return true;
+		}
 		if(toggleDoubleJump.containsKey(p.getUniqueId()))
 		{
 			Long timeLeft = ((toggleDoubleJump.get(p.getUniqueId()) / 1000) + 2) - (System.currentTimeMillis() / 1000);
@@ -30,6 +34,10 @@ public class Cooldowns
 
 	public static boolean playersVisilility(Player p)
 	{
+		if(byPass.contains(p.getUniqueId()))
+		{
+			return true;
+		}
 		if (playersVisibility.containsKey(p.getUniqueId()))
 		{
 			Long timeLeft = ((playersVisibility.get(p.getUniqueId()) / 1000) + 1) - (System.currentTimeMillis() / 1000);
@@ -46,6 +54,10 @@ public class Cooldowns
 
 	public static boolean playerChat(Player p)
 	{
+		if(byPass.contains(p.getUniqueId()))
+		{
+			return true;
+		}
 		if (playerChat.containsKey(p.getUniqueId()))
 		{
 			Long timeLeft = ((playerChat.get(p.getUniqueId()) / 1000) + 3) - (System.currentTimeMillis() / 1000);

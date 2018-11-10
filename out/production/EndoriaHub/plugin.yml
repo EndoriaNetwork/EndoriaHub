@@ -15,3 +15,5 @@ commands:
     aliases: [site]
   socials:
     description: Affiche tous les liens des réseaux socieaux d'EndoriaNetwork.
+  bypass:
+    aliases: [byp,bpass,cooldowns]

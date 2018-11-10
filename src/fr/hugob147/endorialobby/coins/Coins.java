@@ -1,5 +1,6 @@
 package fr.hugob147.endorialobby.coins;
 
+import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.mysql.MySQL;
 import org.bukkit.entity.Player;
 
@@ -13,13 +14,13 @@ public class Coins
 	{
 		try
 		{
-			PreparedStatement sts = MySQL.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
+			PreparedStatement sts = EndoriaLobby.getInstance().mysql.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
 			sts.setString(1, player.getUniqueId().toString());
 			ResultSet rs = sts.executeQuery();
 			if (!rs.next())
 			{
 				sts.close();
-				sts = MySQL.getConnection().prepareStatement("INSERT INTO coins (player_uuid, coins) VALUES (?, ?)");
+				sts = EndoriaLobby.getInstance().mysql.getConnection().prepareStatement("INSERT INTO coins (player_uuid, coins) VALUES (?, ?)");
 				sts.setString(1, player.getUniqueId().toString());
 				sts.setDouble(2, coins);
 				sts.executeUpdate();
@@ -34,7 +35,7 @@ public class Coins
 	{
 		try
 		{
-			PreparedStatement sts = MySQL.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
+			PreparedStatement sts = EndoriaLobby.getInstance().mysql.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
 			sts.setString(1, player.getUniqueId().toString());
 			ResultSet rs = sts.executeQuery();
 			if (rs.next())
@@ -56,14 +57,14 @@ public class Coins
 		}
 		try
 		{
-			PreparedStatement sts = MySQL.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
+			PreparedStatement sts = EndoriaLobby.getInstance().mysql.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
 			sts.setString(1, player.getUniqueId().toString());
 			ResultSet rs = sts.executeQuery();
 			if (rs.next())
 			{
 				Double money = rs.getDouble("coins");
 				sts.close();
-				sts = MySQL.getConnection().prepareStatement("UPDATE coins SET coins=? WHERE player_uuid=?");
+				sts = EndoriaLobby.getInstance().mysql.getConnection().prepareStatement("UPDATE coins SET coins=? WHERE player_uuid=?");
 				sts.setDouble(1, coins + money);
 				sts.setString(2, player.getUniqueId().toString());
 				sts.executeUpdate();
@@ -82,7 +83,7 @@ public class Coins
 		}
 		try
 		{
-			PreparedStatement sts = MySQL.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
+			PreparedStatement sts = EndoriaLobby.getInstance().mysql.getConnection().prepareStatement("SELECT coins FROM coins WHERE player_uuid=?");
 			sts.setString(1, player.getUniqueId().toString());
 			ResultSet rs = sts.executeQuery();
 			if (rs.next())
@@ -93,7 +94,7 @@ public class Coins
 				{
 					coins = money;
 				}
-				sts = MySQL.getConnection().prepareStatement("UPDATE coins SET coins=? WHERE player_uuid=?");
+				sts = EndoriaLobby.getInstance().mysql.getConnection().prepareStatement("UPDATE coins SET coins=? WHERE player_uuid=?");
 				sts.setDouble(1, money - coins);
 				sts.setString(2, player.getUniqueId().toString());
 				sts.executeUpdate();

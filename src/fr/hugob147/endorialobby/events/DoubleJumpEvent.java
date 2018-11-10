@@ -2,10 +2,8 @@ package fr.hugob147.endorialobby.events;
 
 import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.utils.Cooldowns;
-import org.bukkit.Effect;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Sound;
+import net.minecraft.server.v1_8_R3.EnumParticle;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -30,9 +28,8 @@ public class DoubleJumpEvent implements Listener
 			Location loc = p.getLocation();
 			Vector v = loc.getDirection().multiply(1.5f).setY(1.5);
 			p.setVelocity(v);
-			loc.getWorld().playSound(loc, Sound.EXPLODE, 1, 0.2f);
-			loc.setDirection(new Vector(1,2,1));
-			loc.getWorld().playEffect(loc, Effect.SMOKE, 60);
+			p.getLocation().getWorld().playSound(loc, Sound.WITHER_SHOOT, 1, 1f);
+			p.getWorld().playEffect(p.getLocation().add(-1.0D, 0.0D, 0.0D).setDirection(new Vector(0.2,0.2,2)), Effect.SMOKE, 50);
 		}
 	}
 
@@ -46,6 +43,12 @@ public class DoubleJumpEvent implements Listener
 		}
 
 		if(p.isOnGround())
+		{
+			if(!p.getAllowFlight() && EndoriaLobby.getInstance().canDoubleJump.contains(p))
+			{
+				p.setAllowFlight(true);
+			}
+		}else if(Cooldowns.byPass.contains(p.getUniqueId()))
 		{
 			if(!p.getAllowFlight() && EndoriaLobby.getInstance().canDoubleJump.contains(p))
 			{

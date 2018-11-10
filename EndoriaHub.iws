@@ -7,30 +7,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02a68c27-ef85-4b71-b1b6-dc8f72ecc84e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerPickup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndoriaHub.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/EndoriaHub.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/commands/ByPassCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndoriaHub.iws" beforeDir="false" afterPath="$PROJECT_DIR$/EndoriaHub.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/EndoriaLobby.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/EndoriaLobby.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/EventsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/EventsManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/coins/Coins.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/coins/Coins.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/CommandsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/CommandsManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/DoubleJumpEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/DoubleJumpEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/InventoryManager$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/InventoryManager$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/InventoryManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/InventoryManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/InventoryManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/ItemsMenuManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/events/ItemsMenuManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerChat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerChat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerDrop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerDrop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerJoin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerQuit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/listeners/PlayerQuit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/pluginmessaging/PluginMessageReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/pluginmessaging/PluginMessageReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/mysql/MySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/mysql/MySQL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/rank/Rank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/rank/Rank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/shop/ShopItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/shop/ShopItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/utils/Cooldowns.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/utils/Cooldowns.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/utils/ItemBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/fr/hugob147/endorialobby/utils/ItemBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EndoriaHub/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EndoriaHub/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/coins/Coins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/coins/Coins.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/CommandsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/CommandsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumpEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumpEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerDrop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerQuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerQuit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/pluginmessaging/PluginMessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/pluginmessaging/PluginMessageReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/mysql/MySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/mysql/MySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ItemBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +48,7 @@
     <session id="-661886198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.40" value="1" />
@@ -52,32 +57,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
+          <entry key="class" value="3" />
           <entry key="iws" value="1" />
-          <entry key="java" value="83" />
-          <entry key="yml" value="1" />
+          <entry key="java" value="98" />
+          <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
+          <entry key="CLASS" value="3" />
           <entry key="IDEA_WORKSPACE" value="1" />
-          <entry key="JAVA" value="83" />
-          <entry key="YAML" value="1" />
+          <entry key="JAVA" value="98" />
+          <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="java" value="8676" />
-          <entry key="yml" value="305" />
+          <entry key="java" value="11155" />
+          <entry key="yml" value="342" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8676" />
+          <entry key="JAVA" value="11155" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="YAML" value="305" />
+          <entry key="YAML" value="342" />
         </counts>
       </usages-collector>
     </session>
@@ -123,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,78 +137,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java">
+        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/CommandsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ServersListsUpdateRunnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5122#5123#0" expanded="true" />
-                <element signature="e#5140#5141#0" expanded="true" />
-                <element signature="e#5172#5173#0" expanded="true" />
-                <element signature="e#5190#5191#0" expanded="true" />
-                <element signature="e#5224#5225#0" expanded="true" />
-                <element signature="e#5244#5245#0" expanded="true" />
-                <element signature="e#5279#5280#0" expanded="true" />
-                <element signature="e#5300#5301#0" expanded="true" />
-                <element signature="e#5344#5345#0" expanded="true" />
-                <element signature="e#5374#5375#0" expanded="true" />
-                <element signature="e#5419#5420#0" expanded="true" />
-                <element signature="e#5450#5451#0" expanded="true" />
-                <element signature="e#5498#5499#0" expanded="true" />
-                <element signature="e#5532#5533#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerDrop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerPickup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerChat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="260">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -211,8 +148,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+            <state relative-caret-position="549">
+              <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumpEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,12 +170,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java">
+        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="53" column="78" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
+            <state relative-caret-position="340">
+              <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -235,8 +186,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ItemBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-760">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="85">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopItems.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/commands/ByPassCmd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -269,7 +267,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/coins/Coins.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerInteractMenu.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/InvBuilder.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/scoreboard/ScoreboardManager.java" />
@@ -282,27 +279,32 @@
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/pluginmessaging/PluginMessageRecever.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/pluginmessaging/PluginMessageReceiver.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ServersListsUpdateRunnable.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/CommandsManager.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/commands/SocialsCmd.java" />
-        <option value="$PROJECT_DIR$/src/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopItems.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/rank/RankUnit.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerQuit.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryClick.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/rank/Rank.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/commands/RankCmd.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumpEvent.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ItemBuilder.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerChat.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java" />
-        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerDrop.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerPickup.java" />
         <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/coins/Coins.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/mysql/MySQL.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerSound.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/CommandsManager.java" />
+        <option value="$PROJECT_DIR$/src/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/commands/ByPassCmd.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ItemBuilder.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopItems.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopBuy.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java" />
+        <option value="$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumpEvent.java" />
       </list>
     </option>
   </component>
@@ -452,9 +454,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541717462520" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541866381876" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OUTPUT" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
@@ -525,9 +527,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27919462" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27919462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -545,7 +546,7 @@
       <window_info anchor="bottom" id="Floobits" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3240469" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3240469" />
       <window_info anchor="bottom" id="GitLabIntegration" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
@@ -578,13 +579,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerInteractMenu.java" />
     <entry file="jar://$USER_HOME$/Desktop/buildtools/spigot-1.8.8.jar!/org/bukkit/inventory/ItemStack.class" />
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/mysql/MySQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Desktop/buildtools/spigot-1.8.8.jar!/net/minecraft/server/v1_8_R3/PacketPlayOutPlayerListHeaderFooter.class" />
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/mgservers/UpdateRunnable.java" />
@@ -599,13 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -631,13 +618,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumEvent.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/huskehhh/mysql/mysql/MySQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerInteract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -649,13 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -694,18 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2236">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryClick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -720,34 +681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumpEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="49" column="90" selection-start-line="49" selection-start-column="90" selection-end-line="49" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/CommandsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/commands/RankCmd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-845">
           <caret line="100" column="99" selection-start-line="100" selection-start-column="88" selection-end-line="100" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/coins/Coins.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1083">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -782,64 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ItemBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-760">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="53" column="78" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerDrop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,10 +736,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/huskehhh/mysql/mysql/MySQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/buildtools/spigot-1.8.8.jar!/net/minecraft/server/v1_8_R3/CommandParticle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/mysql/MySQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding>
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/coins/Coins.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="96" column="54" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerJoin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="365">
+          <caret line="60" column="44" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5122#5123#0" expanded="true" />
@@ -873,6 +795,131 @@
             <element signature="e#5450#5451#0" expanded="true" />
             <element signature="e#5498#5499#0" expanded="true" />
             <element signature="e#5532#5533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/EventsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/listeners/PlayerSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/CommandsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/commands/ByPassCmd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopBuy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/ItemBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/shop/ShopItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/utils/Cooldowns.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/EndoriaLobby.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/InventoryManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/ItemsMenuManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/hugob147/endorialobby/events/DoubleJumpEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

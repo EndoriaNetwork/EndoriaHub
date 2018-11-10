@@ -24,7 +24,7 @@ public class ItemsMenuManager
 				player.openInventory(new InventoryManager(player).menuboutique());
 			}else if(item.isSimilar(new InventoryManager(player).menuboutique().getItem(21)))
 			{
-				player.openInventory(main.grade.toInventory());
+				player.openInventory(new InventoryManager(player).menuboutiquegrade());
 			}else if(item.isSimilar(new InventoryManager(player).menuboutique().getItem(23)))
 			{
 				//player.openInventory(main.particule.toInventory());
@@ -75,7 +75,7 @@ public class ItemsMenuManager
 					//TODO: trasp player
 					for(Player a : Bukkit.getOnlinePlayers())
 					{
-
+						
 					}
 					player.getInventory().setItem(2, new PlayerJoin().getPlayersTrasnpVisible());
 				}

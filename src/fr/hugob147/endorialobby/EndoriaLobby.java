@@ -15,6 +15,8 @@ import fr.hugob147.endorialobby.utils.ServersListsUpdateRunnable;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.Team;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,14 +29,13 @@ public final class EndoriaLobby
 	private static EndoriaLobby instance;
 	public MySQL mysql = new MySQL();
 	public Rank rank = new Rank();
+	public Team ghost;
 	public Coins coins = new Coins();
 	public HashMap<UUID, ScoreboardManager> scoreboard = new HashMap();
 	public InvBuilder uhcInv = new InvBuilder("§5§lServeurs §f§lUHCRun", 54);
 	public InvBuilder bedwarsInv = new InvBuilder("§5§lServeurs §f§lBedWars", 54);
 	public InvBuilder skywarsInv = new InvBuilder("§5§lServeurs §f§lSkyWars", 54);
 	public InvBuilder tuapeInv = new InvBuilder("§5§lServeurs §f§lTaupeGun", 54);
-	public InvBuilder grade = new InvBuilder("§bGrade", 27);
-	public InvBuilder particule = new InvBuilder("§cParticule", 27);
 	public List<Player> canDoubleJump = new ArrayList<>();
 
 	public void onEnable()
@@ -43,6 +44,8 @@ public final class EndoriaLobby
 
 		new EventsManager().registers(this);
 		new CommandsManager().registers(this);
+
+		this.initGhost();
 
 		getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 		getServer().getMessenger().registerOutgoingPluginChannel(this, "Endoria");
@@ -73,6 +76,14 @@ public final class EndoriaLobby
 			this.skywarsInv = new InventoryManager(p.getPlayer()).serverInvInit("SkyWars", this.skywarsInv);
 			this.tuapeInv = new InventoryManager(p.getPlayer()).serverInvInit("TaupeGun", this.tuapeInv);
 		}
+	}
+
+	private void initGhost()
+	{
+		org.bukkit.scoreboard.ScoreboardManager sbManager = Bukkit.getScoreboardManager();
+		Scoreboard sb = sbManager.getNewScoreboard();
+		ghost = sb.registerNewTeam("Ghost");
+		ghost.setCanSeeFriendlyInvisibles(true);
 	}
 
 }
