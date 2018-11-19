@@ -3,6 +3,9 @@ package fr.hugob147.endorialobby.events;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import fr.hugob147.endorialobby.EndoriaLobby;
+import fr.hugob147.endorialobby.listeners.PlayerJoin;
+import fr.hugob147.endorialobby.utils.Cooldowns;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -28,6 +31,14 @@ public class InventoryClick implements Listener
 
 		Inventory endoriaMenu = new InventoryManager(p).endoriaMenu();
 
+		if(i.isSimilar(new PlayerJoin().getStar()) || i.isSimilar(new PlayerJoin().getGold()) || i.isSimilar(new PlayerJoin().getJumpOff()) || i.isSimilar(new PlayerJoin().getJumpOn()) || i.isSimilar(new PlayerJoin().getPlayersYesVisible()) || i.isSimilar(new PlayerJoin().getPlayersNoVisible()))
+		{
+			if(!Cooldowns.byPass.contains(p.getUniqueId()))
+			{
+				e.setCancelled(true);
+			}
+		}
+
 		if(inv.getName().equals(endoriaMenu.getName()))
 		{
 			e.setCancelled(true);
@@ -40,8 +51,7 @@ public class InventoryClick implements Listener
 				new ItemsMenuManager(new InventoryManager(p).endoriaMenu().getItem(33), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(21)))
 			{
-				p.sendMessage("§aVous allez être connecté au serveur : §bFaction");
-				changeServer(p, "FactionEndoria");
+				new ItemsMenuManager(new InventoryManager(p).endoriaMenu().getItem(21), p);
 			}else if(i.isSimilar(endoriaMenu.getItem(13)))
 			{
 				new ItemsMenuManager(new InventoryManager(p).endoriaMenu().getItem(13), p);

@@ -40,6 +40,9 @@ public class ItemsMenuManager
 			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(13)))
 			{
 				player.openInventory(main.tuapeInv.toInventory());
+			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(21)))
+			{
+				player.openInventory(main.sheepwarsInv.toInventory());
 			}else if(item.isSimilar(new InventoryManager(player).endoriaMenu().getItem(31)))
 			{
 				player.openInventory(main.skywarsInv.toInventory());
@@ -67,19 +70,6 @@ public class ItemsMenuManager
 					player.getInventory().setItem(0, new PlayerJoin().getJumpOn());
 				}
 			}else if(item.isSimilar(new PlayerJoin().getPlayersYesVisible()))
-			{
-				if(Cooldowns.playersVisilility(player))
-				{
-					player.playSound(player.getLocation(), Sound.LEVEL_UP, 100,0.20F);
-					player.sendMessage("§cCette fonctionnalité n'est pas disponible !");
-					//TODO: trasp player
-					for(Player a : Bukkit.getOnlinePlayers())
-					{
-						
-					}
-					player.getInventory().setItem(2, new PlayerJoin().getPlayersTrasnpVisible());
-				}
-			}else if(item.isSimilar(new PlayerJoin().getPlayersTrasnpVisible()))
 			{
 				if(Cooldowns.playersVisilility(player))
 				{

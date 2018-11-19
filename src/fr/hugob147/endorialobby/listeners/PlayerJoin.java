@@ -4,9 +4,7 @@ import fr.hugob147.endorialobby.EndoriaLobby;
 import fr.hugob147.endorialobby.rank.Rank;
 import fr.hugob147.endorialobby.scoreboard.ScoreboardManager;
 import fr.hugob147.endorialobby.utils.ItemBuilder;
-import net.minecraft.server.v1_8_R3.IChatBaseComponent;
-import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerListHeaderFooter;
-import net.minecraft.server.v1_8_R3.PlayerConnection;
+import net.minecraft.server.v1_8_R3.*;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -31,7 +29,6 @@ public class PlayerJoin implements Listener
 	private ItemStack jumpOff = new ItemBuilder(Material.INK_SACK).setDurability((short) 8).setName("§eSuper saut : §c§lOff").setLore(" ").toItemStack();
 	private ItemStack playersNoVisible = new ItemBuilder(Material.SKULL_ITEM).setSkullUrl("http://textures.minecraft.net/texture/ba24a2b6b4b5a92d7a82a373fe5f6bb66872ead66c126f82e8864173cd783a").setLore(" ").setName("§dVisibilité des joueurs : §c§lNon").toItemStack();
 	private ItemStack playersYesVisible = new ItemBuilder(Material.SKULL_ITEM).setSkullUrl("http://textures.minecraft.net/texture/9054d4164ea8bba02836bd513c420d04dd91b9fdbb3da17e69f9bf89ffd695").setLore(" ").setName("§dVisibilité des joueurs : §a§lOui").toItemStack();
-	private ItemStack playersTrasnpVisible = new ItemBuilder(Material.SKULL_ITEM).setSkullUrl("http://textures.minecraft.net/texture/e6ad6751595dec669fffc895a1916aff719216f541af112a969351c57be4a8").setLore(" ").setName("§dVisibilité des joueurs : §5§lTransparent").toItemStack();
 
 	@EventHandler public void onJoin(PlayerJoinEvent e)
 	{
@@ -46,10 +43,6 @@ public class PlayerJoin implements Listener
 					a.hidePlayer(player);
 				} else if (a.getInventory().getItem(2).isSimilar(playersYesVisible))
 				{
-					a.showPlayer(player);
-				} else if (a.getInventory().getItem(2).isSimilar(playersTrasnpVisible))
-				{
-					//TODO: trasp player
 					a.showPlayer(player);
 				}
 			}
@@ -148,10 +141,5 @@ public class PlayerJoin implements Listener
 	public ItemStack getPlayersYesVisible()
 	{
 		return playersYesVisible;
-	}
-
-	public ItemStack getPlayersTrasnpVisible()
-	{
-		return playersTrasnpVisible;
 	}
 }

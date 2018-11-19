@@ -15,7 +15,7 @@ public class PlayerDrop implements Listener
 		{
 			ItemStack it = e.getItemDrop().getItemStack();
 
-			if(it.isSimilar(new PlayerJoin().getStar())|| it.isSimilar(new PlayerJoin().getGold()) || it.isSimilar(new PlayerJoin().getJumpOn())|| it.isSimilar(new PlayerJoin().getJumpOff()) || it.isSimilar(new PlayerJoin().getPlayersYesVisible()) || it.isSimilar(new PlayerJoin().getPlayersNoVisible()) || it.isSimilar(new PlayerJoin().getPlayersTrasnpVisible()))
+			if(it.isSimilar(new PlayerJoin().getStar())|| it.isSimilar(new PlayerJoin().getGold()) || it.isSimilar(new PlayerJoin().getJumpOn())|| it.isSimilar(new PlayerJoin().getJumpOff()) || it.isSimilar(new PlayerJoin().getPlayersYesVisible()) || it.isSimilar(new PlayerJoin().getPlayersNoVisible()))
 			{
 				e.setCancelled(true);
 			}

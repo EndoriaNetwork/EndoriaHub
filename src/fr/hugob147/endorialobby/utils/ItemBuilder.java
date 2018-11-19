@@ -137,12 +137,20 @@ public class ItemBuilder
 		return this;
 	}
 
-	public ItemBuilder setWoolColor(DyeColor color)
+	public ItemBuilder setGlassPaneColor(DyeColor color)
 	{
 		if (!this.is.getType().equals(Material.STAINED_GLASS_PANE))
 		{
 			return this;
 		}
+		this.is.setDurability(color.getData());
+		return this;
+	}
+
+	public ItemBuilder setWoolColor(DyeColor color)
+	{
+		if (!is.getType().equals(Material.WOOL))
+			return this;
 		this.is.setDurability(color.getData());
 		return this;
 	}

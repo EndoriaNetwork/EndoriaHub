@@ -1,4 +1,4 @@
-name: EndoriaLobby
+name: EndoriaHub
 version: 1.0-SNAPSHOT
 main: fr.hugob147.endorialobby.EndoriaLobby
 authors: [hugob147, TinouHD]
@@ -16,4 +16,5 @@ commands:
   socials:
     description: Affiche tous les liens des réseaux socieaux d'EndoriaNetwork.
   bypass:
+    description: Permet de ne pas avoir de temps d'utilisation.
     aliases: [byp,bpass,cooldowns]

@@ -17,7 +17,11 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.messaging.PluginMessageListener;
 
-public class InventoryManager implements PluginMessageListener
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class InventoryManager
 {
 	private static Player player;
 	private static String[] servers;
@@ -34,10 +38,10 @@ public class InventoryManager implements PluginMessageListener
 	{
 		InvBuilder inv = new InvBuilder("§5Endoria Menu", 45);
 
-		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setWoolColor(DyeColor.PURPLE).toItemStack();
+		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setGlassPaneColor(DyeColor.PURPLE).toItemStack();
 		ItemStack DIAMOND_PICKAXE = new ItemBuilder(Material.DIAMOND_PICKAXE).setName("§bOp-Prison").setLore(
 				"§7Clique gauche pour rejoindre").toItemStack();
-		ItemStack TNT = new ItemBuilder(Material.TNT).setName("§cFaction").setLore("§7Clique gauche pour rejoindre").toItemStack();
+		ItemStack SHEEPWARS = new ItemBuilder(Material.WOOL).setWoolColor(DyeColor.GREEN).setName("§aSheepWars").setLore("§7Clique gauche pour rejoindre").toItemStack();
 		ItemStack TAUPE = new ItemBuilder(Material.GOLDEN_APPLE).setName("§cTaupe Gun").setLore(
 				"§7Clique gauche pour rejoindre").toItemStack();
 		ItemStack UHCRUN = new ItemBuilder(Material.APPLE).setName("§6Uhc-Run").setLore(
@@ -47,7 +51,7 @@ public class InventoryManager implements PluginMessageListener
 		ItemStack BEDWARS = new ItemBuilder(Material.BED).setName("§6BedWars").setLore("§7Clique gauche pour rejoindre").toItemStack();
 
 		inv.setItem(DIAMOND_PICKAXE,23);
-		inv.setItem(TNT,21);
+		inv.setItem(SHEEPWARS,21);
 		inv.setItem(TAUPE,13);
 		inv.setItem(UHCRUN,29);
 		inv.setItem(SKYWARS,31);
@@ -60,7 +64,7 @@ public class InventoryManager implements PluginMessageListener
 
 	public Inventory menuboutique(){
 		InvBuilder inv = new InvBuilder("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!", 45);
-		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setWoolColor(DyeColor.PURPLE).toItemStack();
+		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setGlassPaneColor(DyeColor.PURPLE).toItemStack();
 		ItemStack Diamond = new ItemBuilder(Material.DIAMOND).setName("§bGrade").setLore("").toItemStack();
 		ItemStack Gold = new ItemBuilder(Material.GOLD_INGOT).setName("§eParticule").setLore("").toItemStack();
 
@@ -74,7 +78,7 @@ public class InventoryManager implements PluginMessageListener
 
 	public Inventory menuboutiquegrade(){
 		InvBuilder inv = new InvBuilder("§b§k!§a§k!§c§k!§r §eBoutique §c§k!§a§k!§b§k!", 27);
-		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setWoolColor(DyeColor.PURPLE).toItemStack();
+		ItemStack vitre = new ItemBuilder(Material.STAINED_GLASS_PANE).setName("§5§lEndoria§f§lNetwork").setLore("").setGlassPaneColor(DyeColor.PURPLE).toItemStack();
 
 		inv.fillSlotToSlot(0,10,vitre);
 
@@ -98,7 +102,7 @@ public class InventoryManager implements PluginMessageListener
 		ItemStack close = new ItemBuilder(Material.STAINED_CLAY).setClayColor(DyeColor.RED).setLore(
 				"§cLa partie a déjà commencé","","§7Clique droit pour voir les joueurs connectés").toItemStack();
 
-		getServers(player);
+		//getServers(player);
 
 		Bukkit.getScheduler().scheduleSyncDelayedTask(EndoriaLobby.getInstance(), new Runnable()
 		{
@@ -109,8 +113,8 @@ public class InventoryManager implements PluginMessageListener
 				{
 					if(s.contains(server))
 					{
-						getMaxPlayers(s, player);
-						getPlayerCount(s, player);
+						//getMaxPlayers(s, player);
+						//getPlayerCount(s, player);
 						Bukkit.getScheduler().scheduleSyncDelayedTask(EndoriaLobby.getInstance(), new Runnable()
 						{
 							@Override public void run()
@@ -154,52 +158,5 @@ public class InventoryManager implements PluginMessageListener
 			}
 		},2L);
 		return inv;
-	}
-
-	private static void getPlayerCount(String server, Player p)
-	{
-		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PlayerCount");
-		out.writeUTF(server);
-
-		p.sendPluginMessage(EndoriaLobby.getInstance(), "BungeeCord", out.toByteArray());
-	}
-
-	private static void getMaxPlayers(String server, Player p)
-	{
-		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("PlayerList");
-		out.writeUTF(server);
-
-		p.sendPluginMessage(EndoriaLobby.getInstance(), "BungeeCord", out.toByteArray());
-	}
-
-	private static void getServers(Player p)
-	{
-		ByteArrayDataOutput out = ByteStreams.newDataOutput();
-		out.writeUTF("GetServers");
-
-		p.sendPluginMessage(EndoriaLobby.getInstance(), "BungeeCord", out.toByteArray());
-	}
-
-	@Override public void onPluginMessageReceived(String channel, Player player, byte[] message)
-	{
-		if (!channel.equals("BungeeCord") && player != InventoryManager.player) {
-			return;
-		}
-		ByteArrayDataInput in = ByteStreams.newDataInput(message);
-		String subchannel = in.readUTF();
-		if (subchannel.equals("GetServers")) {
-
-			servers = in.readUTF().split(", ");
-		}
-		if (subchannel.equals("PlayerCount")) {
-
-			playerCount = in.readInt();
-		}
-		if (subchannel.equals("PlayerList")) {
-
-			playerList = in.readInt();
-		}
 	}
 }
